@@ -118,8 +118,3 @@ In the next test, we create an instance, save it, change its name, and then
 specify that a call to the save method should trigger an `update`.
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/bringing-it-all-together' title='Basic Dog ORM'>ORMs Lab: Bringing It All Together</a> on Learn.co and start learning to code for free.</p>
-
-
-Add clarification for ::new_from_db
-
-A few extra sentences to more clearly explain the argument passed to the method and the expectation of creating object instances of the class.
