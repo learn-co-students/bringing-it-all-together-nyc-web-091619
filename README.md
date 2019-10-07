@@ -82,12 +82,9 @@ class method on `Dog` that will execute the correct SQL to drop a dogs table.
 
 - **`::new_from_db`**
 
-This is an interesting method. Ultimately, the database is going to return an
-array representing a dog's data. We need a way to cast that data into the
-appropriate attributes of a dog. This method encapsulates that functionality.
-You can even think of it as  `new_from_array`. Methods like this, that return
-instances of the class, are known as constructors, just like `.new`, except that
-they extend the functionality of `.new` without overwriting `initialize`.
+This is an interesting method. Ultimately, the database is going to return an array representing a dog's data. However, that dog is already in the database.  The method will be passed an argument of an array that represents a row of data (a dog that already exists) from the database, with columns: id, name and breed.  
+
+We need a way to cast that data into the appropriate attributes of a dog, in a new object instance of the Dog class. This method encapsulates that functionality. You can even think of it as new_from_array. Methods like this, that return instances of the class, are known as constructors, just like .new, except that they extend the functionality of .new without overwriting initialize.
 
 - **`::find_by_name`**
 
@@ -121,3 +118,8 @@ In the next test, we create an instance, save it, change its name, and then
 specify that a call to the save method should trigger an `update`.
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/bringing-it-all-together' title='Basic Dog ORM'>ORMs Lab: Bringing It All Together</a> on Learn.co and start learning to code for free.</p>
+
+
+Add clarification for ::new_from_db
+
+A few extra sentences to more clearly explain the argument passed to the method and the expectation of creating object instances of the class.
